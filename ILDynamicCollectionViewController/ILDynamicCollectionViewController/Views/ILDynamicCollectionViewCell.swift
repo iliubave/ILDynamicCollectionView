@@ -1,6 +1,6 @@
 //
 //  ILDynamicCollectionViewCell.swift
-//  ILDynamicCollectionView
+//  ILDynamicCollectionViewController
 //
 //  Created by Igar Liubavetskiy on 2017-08-25.
 //  Copyright © 2017 Igar Liubavetskiy. All rights reserved.

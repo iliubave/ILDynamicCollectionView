@@ -18,16 +18,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CAD034D71F28211B00C0F91A /* ILDynamicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILDynamicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD034D71F28211B00C0F91A /* ILDynamicCollectionViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILDynamicCollectionViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD034DA1F28211B00C0F91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD034DF1F28211B00C0F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAD034E11F28211B00C0F91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD034E41F28211B00C0F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAD034E61F28211B00C0F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAD034F41F28331600C0F91A /* ILDynamicLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILDynamicLayout.swift; path = Layouts/ILDynamicLayout.swift; sourceTree = "<group>"; };
-		CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILDynamicCollectionViewCell.swift; path = Views/ILDynamicCollectionViewCell.swift; sourceTree = "<group>"; };
-		CAD034F81F28332800C0F91A /* ILDynamicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILDynamicCollectionViewController.swift; path = Controllers/ILDynamicCollectionViewController.swift; sourceTree = "<group>"; };
-		CAD034FA1F283E8300C0F91A /* ILDynamicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ILDynamicItem.swift; path = Models/ILDynamicItem.swift; sourceTree = "<group>"; };
+		CAD034F41F28331600C0F91A /* ILDynamicLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicLayout.swift; sourceTree = "<group>"; };
+		CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicCollectionViewCell.swift; sourceTree = "<group>"; };
+		CAD034F81F28332800C0F91A /* ILDynamicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicCollectionViewController.swift; sourceTree = "<group>"; };
+		CAD034FA1F283E8300C0F91A /* ILDynamicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		CAD034CE1F28211B00C0F91A = {
 			isa = PBXGroup;
 			children = (
-				CAD034D91F28211B00C0F91A /* ILDynamicCollectionView */,
+				CAD034D91F28211B00C0F91A /* ILDynamicCollectionViewController */,
 				CAD034D81F28211B00C0F91A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		CAD034D81F28211B00C0F91A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAD034D71F28211B00C0F91A /* ILDynamicCollectionView.app */,
+				CAD034D71F28211B00C0F91A /* ILDynamicCollectionViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAD034D91F28211B00C0F91A /* ILDynamicCollectionView */ = {
+		CAD034D91F28211B00C0F91A /* ILDynamicCollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CAD034EF1F28282B00C0F91A /* Models */,
@@ -70,7 +70,7 @@
 				CAD034E31F28211B00C0F91A /* LaunchScreen.storyboard */,
 				CAD034E61F28211B00C0F91A /* Info.plist */,
 			);
-			path = ILDynamicCollectionView;
+			path = ILDynamicCollectionViewController;
 			sourceTree = "<group>";
 		};
 		CAD034EC1F28281000C0F91A /* Controllers */ = {
@@ -78,7 +78,7 @@
 			children = (
 				CAD034F81F28332800C0F91A /* ILDynamicCollectionViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CAD034ED1F28281500C0F91A /* Views */ = {
@@ -86,7 +86,7 @@
 			children = (
 				CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CAD034EE1F28281C00C0F91A /* Layout */ = {
@@ -94,7 +94,7 @@
 			children = (
 				CAD034F41F28331600C0F91A /* ILDynamicLayout.swift */,
 			);
-			name = Layout;
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		CAD034EF1F28282B00C0F91A /* Models */ = {
@@ -102,7 +102,7 @@
 			children = (
 				CAD034FA1F283E8300C0F91A /* ILDynamicItem.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +122,7 @@
 			);
 			name = ILDynamicCollectionView;
 			productName = ILDynamicCollectionView;
-			productReference = CAD034D71F28211B00C0F91A /* ILDynamicCollectionView.app */;
+			productReference = CAD034D71F28211B00C0F91A /* ILDynamicCollectionViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAD034D21F28211B00C0F91A /* Build configuration list for PBXProject "ILDynamicCollectionView" */;
+			buildConfigurationList = CAD034D21F28211B00C0F91A /* Build configuration list for PBXProject "ILDynamicCollectionViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -306,10 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G2F78XDFSY;
-				INFOPLIST_FILE = ILDynamicCollectionView/Info.plist;
+				INFOPLIST_FILE = ILDynamicCollectionViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.ILDynamicCollectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = co.ILDynamicCollectionViewController;
+				PRODUCT_NAME = ILDynamicCollectionViewController;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -319,10 +319,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G2F78XDFSY;
-				INFOPLIST_FILE = ILDynamicCollectionView/Info.plist;
+				INFOPLIST_FILE = ILDynamicCollectionViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.ILDynamicCollectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = co.ILDynamicCollectionViewController;
+				PRODUCT_NAME = ILDynamicCollectionViewController;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAD034D21F28211B00C0F91A /* Build configuration list for PBXProject "ILDynamicCollectionView" */ = {
+		CAD034D21F28211B00C0F91A /* Build configuration list for PBXProject "ILDynamicCollectionViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAD034E71F28211B00C0F91A /* Debug */,
@@ -346,6 +346,7 @@
 				CAD034EB1F28211B00C0F91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

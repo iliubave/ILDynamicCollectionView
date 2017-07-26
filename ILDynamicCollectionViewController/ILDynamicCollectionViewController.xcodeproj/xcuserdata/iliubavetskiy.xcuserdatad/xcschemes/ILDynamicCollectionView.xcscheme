@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CAD034D61F28211B00C0F91A"
-               BuildableName = "ILDynamicCollectionView.app"
+               BuildableName = "ILDynamicCollectionViewController.app"
                BlueprintName = "ILDynamicCollectionView"
-               ReferencedContainer = "container:ILDynamicCollectionView.xcodeproj">
+               ReferencedContainer = "container:ILDynamicCollectionViewController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CAD034D61F28211B00C0F91A"
-            BuildableName = "ILDynamicCollectionView.app"
+            BuildableName = "ILDynamicCollectionViewController.app"
             BlueprintName = "ILDynamicCollectionView"
-            ReferencedContainer = "container:ILDynamicCollectionView.xcodeproj">
+            ReferencedContainer = "container:ILDynamicCollectionViewController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CAD034D61F28211B00C0F91A"
-            BuildableName = "ILDynamicCollectionView.app"
+            BuildableName = "ILDynamicCollectionViewController.app"
             BlueprintName = "ILDynamicCollectionView"
-            ReferencedContainer = "container:ILDynamicCollectionView.xcodeproj">
+            ReferencedContainer = "container:ILDynamicCollectionViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CAD034D61F28211B00C0F91A"
-            BuildableName = "ILDynamicCollectionView.app"
+            BuildableName = "ILDynamicCollectionViewController.app"
             BlueprintName = "ILDynamicCollectionView"
-            ReferencedContainer = "container:ILDynamicCollectionView.xcodeproj">
+            ReferencedContainer = "container:ILDynamicCollectionViewController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
