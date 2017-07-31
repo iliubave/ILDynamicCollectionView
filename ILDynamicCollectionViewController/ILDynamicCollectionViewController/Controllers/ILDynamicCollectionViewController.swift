@@ -40,6 +40,7 @@ class ILDynamicCollectionViewController: UICollectionViewController {
 
 		if let layout = self.collectionView?.collectionViewLayout as? ILDynamicLayout {
 			layout.delegate = self
+            self.layoutForOrientationChange()
 		}
         
         let nib = UINib(nibName: "ILDynamicCollectionViewCell", bundle: nil)
@@ -55,6 +56,21 @@ class ILDynamicCollectionViewController: UICollectionViewController {
 			layout.invalidateLayout()
 		}
 	}
+    
+    func layoutForOrientationChange(){
+        if let layout = self.collectionView?.collectionViewLayout as? ILDynamicLayout {
+            if UIDevice.current.orientation == .landscapeLeft ||
+                UIDevice.current.orientation == .landscapeRight  {
+                layout.numberOfColumns = self.landscapeNumberOfColumns
+            } else {
+                layout.numberOfColumns = self.portraitNumberOfColumns
+            }
+            
+            // TODO: make custom context
+            self.collectionView?.collectionViewLayout.invalidateLayout()
+            self.collectionView?.collectionViewLayout.prepare()
+        }
+    }
 }
 
 extension ILDynamicCollectionViewController {
@@ -80,7 +96,8 @@ extension ILDynamicCollectionViewController {
 	override func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		var offset: CGFloat = 0
 		var sizeLength: CGFloat = 0
-		if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) {
+        if UIDevice.current.orientation == .landscapeLeft ||
+            UIDevice.current.orientation == .landscapeRight {
 			offset = scrollView.contentOffset.x
 			sizeLength = scrollView.contentSize.width - scrollView.frame.size.width
 		} else {
