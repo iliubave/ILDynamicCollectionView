@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA110EB21F2EB3B400C271BF /* ILDynamicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA110EB01F2EB3B400C271BF /* ILDynamicCollectionViewCell.swift */; };
+		CA110EB31F2EB3B400C271BF /* ILDynamicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA110EB11F2EB3B400C271BF /* ILDynamicCollectionViewCell.xib */; };
+		CA4A12291F2EB77B00E0FF93 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A12281F2EB77B00E0FF93 /* Extensions.swift */; };
 		CAD034DB1F28211B00C0F91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD034DA1F28211B00C0F91A /* AppDelegate.swift */; };
 		CAD034E01F28211B00C0F91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD034DE1F28211B00C0F91A /* Main.storyboard */; };
 		CAD034E21F28211B00C0F91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD034E11F28211B00C0F91A /* Assets.xcassets */; };
 		CAD034E51F28211B00C0F91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD034E31F28211B00C0F91A /* LaunchScreen.storyboard */; };
 		CAD034F51F28331600C0F91A /* ILDynamicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD034F41F28331600C0F91A /* ILDynamicLayout.swift */; };
-		CAD034F71F28331E00C0F91A /* ILDynamicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */; };
 		CAD034F91F28332800C0F91A /* ILDynamicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD034F81F28332800C0F91A /* ILDynamicCollectionViewController.swift */; };
 		CAD034FB1F283E8300C0F91A /* ILDynamicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD034FA1F283E8300C0F91A /* ILDynamicItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA110EB01F2EB3B400C271BF /* ILDynamicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA110EB11F2EB3B400C271BF /* ILDynamicCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ILDynamicCollectionViewCell.xib; sourceTree = "<group>"; };
+		CA4A12281F2EB77B00E0FF93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Extensions/Extensions.swift; sourceTree = "<group>"; };
 		CAD034D71F28211B00C0F91A /* ILDynamicCollectionViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILDynamicCollectionViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD034DA1F28211B00C0F91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD034DF1F28211B00C0F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -25,7 +30,6 @@
 		CAD034E41F28211B00C0F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAD034E61F28211B00C0F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAD034F41F28331600C0F91A /* ILDynamicLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicLayout.swift; sourceTree = "<group>"; };
-		CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAD034F81F28332800C0F91A /* ILDynamicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicCollectionViewController.swift; sourceTree = "<group>"; };
 		CAD034FA1F283E8300C0F91A /* ILDynamicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILDynamicItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA4A12271F2EB76500E0FF93 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA4A12281F2EB77B00E0FF93 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		CAD034CE1F28211B00C0F91A = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +72,7 @@
 		CAD034D91F28211B00C0F91A /* ILDynamicCollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CA4A12271F2EB76500E0FF93 /* Extensions */,
 				CAD034EF1F28282B00C0F91A /* Models */,
 				CAD034EE1F28281C00C0F91A /* Layout */,
 				CAD034ED1F28281500C0F91A /* Views */,
@@ -84,7 +97,8 @@
 		CAD034ED1F28281500C0F91A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CAD034F61F28331E00C0F91A /* ILDynamicCollectionViewCell.swift */,
+				CA110EB01F2EB3B400C271BF /* ILDynamicCollectionViewCell.swift */,
+				CA110EB11F2EB3B400C271BF /* ILDynamicCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD034E51F28211B00C0F91A /* LaunchScreen.storyboard in Resources */,
+				CA110EB31F2EB3B400C271BF /* ILDynamicCollectionViewCell.xib in Resources */,
 				CAD034E21F28211B00C0F91A /* Assets.xcassets in Resources */,
 				CAD034E01F28211B00C0F91A /* Main.storyboard in Resources */,
 			);
@@ -179,8 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD034F91F28332800C0F91A /* ILDynamicCollectionViewController.swift in Sources */,
+				CA4A12291F2EB77B00E0FF93 /* Extensions.swift in Sources */,
+				CA110EB21F2EB3B400C271BF /* ILDynamicCollectionViewCell.swift in Sources */,
 				CAD034FB1F283E8300C0F91A /* ILDynamicItem.swift in Sources */,
-				CAD034F71F28331E00C0F91A /* ILDynamicCollectionViewCell.swift in Sources */,
 				CAD034F51F28331600C0F91A /* ILDynamicLayout.swift in Sources */,
 				CAD034DB1F28211B00C0F91A /* AppDelegate.swift in Sources */,
 			);

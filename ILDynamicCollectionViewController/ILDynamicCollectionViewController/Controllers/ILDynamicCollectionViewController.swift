@@ -8,25 +8,42 @@
 
 import UIKit
 
-private let reuseIdentifier = "PXPhotoCollectionViewCellIdentifier"
-
 class ILDynamicCollectionViewController: UICollectionViewController {
 
 	let imagesCache = NSCache<AnyObject, AnyObject>()
 	var dynamicItems: [ILDynamicItem] = []
 	var currentPage = 1
     var isFetchingNextPage = true
+    
+    // customizables
     var portraitNumberOfColumns = 3
-    var landscapeNumberOfColumns = 3
-
-	var sourceIndexPath: IndexPath?
+    var landscapeNumberOfColumns = 5
+    
+    private func prepareDemoContent() {
+        for _ in 0...500 {
+            let item = ILDynamicItem()
+            
+            // demo size ranges
+            let width = CGFloat(Int.random(from: 50, to: 200))
+            let height = CGFloat(Int.random(from: 50, to: 200))
+            
+            item.contentSize = CGSize(width: width, height: height)
+            
+            self.dynamicItems.append(item)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.prepareDemoContent()
 
 		if let layout = self.collectionView?.collectionViewLayout as? ILDynamicLayout {
 			layout.delegate = self
 		}
+        
+        let nib = UINib(nibName: "ILDynamicCollectionViewCell", bundle: nil)
+        self.collectionView?.register(nib, forCellWithReuseIdentifier: ILDynamicCollectionViewCell.reuseIdentifier)
     }
 
 	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -51,19 +68,18 @@ extension ILDynamicCollectionViewController {
 	}
 
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ILDynamicCollectionViewCell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ILDynamicCollectionViewCell.reuseIdentifier, for: indexPath) as! ILDynamicCollectionViewCell
 
-		let item = self.dynamicItems[indexPath.item]
-
+        cell.containerView.backgroundColor = UIColor.random()
+        
 		return cell
 	}
 
-	// willDisplay couldn't be used due to some inconsistencies
-	// with the way cells were getting layed out 
-	// (reaching very last indexPath.item could result in having an empty column)
+	// willDisplay cannot be used due to some inconsistencies
+	// reaching very last indexPath.item could result in having an empty column
 	override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-		var offset:CGFloat = 0
-		var sizeLength:CGFloat = 0
+		var offset: CGFloat = 0
+		var sizeLength: CGFloat = 0
 		if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) {
 			offset = scrollView.contentOffset.x
 			sizeLength = scrollView.contentSize.width - scrollView.frame.size.width
@@ -71,6 +87,12 @@ extension ILDynamicCollectionViewController {
 			offset = scrollView.contentOffset.y
 			sizeLength = scrollView.contentSize.height - scrollView.frame.size.height
 		}
+        
+        
+        // TODO: pagination logic
+        if offset >= sizeLength && !self.isFetchingNextPage {
+            
+        }
 	}
 }
 
@@ -78,15 +100,17 @@ extension ILDynamicCollectionViewController : ILDynamicLayoutLayoutDelegate {
 	func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, with width: CGFloat) -> CGFloat {
 
 		let item = self.dynamicItems[indexPath.item]
-//		if let photoWidth = photo.width, let photoHeight = photo.height {
-//			let aspectRatio = photoWidth / photoHeight
-//
-//			if aspectRatio >= 0 {
-//				return CGFloat(width / aspectRatio)
-//			} else {
-//				return CGFloat(width * aspectRatio)
-//			}
-//		}
+        let size = item.contentSize
+        
+		if let width = size?.width, let height = size?.height {
+			let aspectRatio = width / height
+
+			if aspectRatio >= 0 {
+				return CGFloat(width / aspectRatio)
+			} else {
+				return CGFloat(width * aspectRatio)
+			}
+		}
 
 		return 0.0
 	}

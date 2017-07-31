@@ -6,8 +6,9 @@
 //  Copyright © 2017 Igar Liubavetskiy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ILDynamicItem {
+    var contentSize: CGSize!
 
 }

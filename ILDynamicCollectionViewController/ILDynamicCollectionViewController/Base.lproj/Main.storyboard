@@ -12,16 +12,16 @@
         <!--Dynamic Collection View Controller-->
         <scene sceneID="2Kz-E7-XOM">
             <objects>
-                <collectionViewController id="WGK-F7-5oi" customClass="ILDynamicCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="WGK-F7-5oi" customClass="ILDynamicCollectionViewController" customModule="ILDynamicCollectionViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="b6v-TB-m9H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewLayout key="collectionViewLayout" id="D8E-yD-pff" customClass="ILDynamicLayout"/>
+                        <collectionViewLayout key="collectionViewLayout" id="D8E-yD-pff" customClass="ILDynamicLayout" customModule="ILDynamicCollectionViewController"/>
                         <cells/>
                         <connections>
-                            <outlet property="dataSource" destination="WGK-F7-5oi" id="6FT-iO-SNy"/>
-                            <outlet property="delegate" destination="WGK-F7-5oi" id="lug-w5-zfV"/>
+                            <outlet property="dataSource" destination="WGK-F7-5oi" id="owm-m2-t2Z"/>
+                            <outlet property="delegate" destination="WGK-F7-5oi" id="iER-6Z-0vQ"/>
                         </connections>
                     </collectionView>
                 </collectionViewController>
